@@ -17,7 +17,7 @@ GET /time?format=year%2Cmonth%2Cday
 
 ```
 $ cd "/app/dir"
-$ rakeup
+$ rackup
 
 # app test
 curl --url 'localhost:9292/time?format=year,day,hour' -i # => 200
