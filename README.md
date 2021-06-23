@@ -14,3 +14,13 @@ GET /time?format=year%2Cmonth%2Cday
 Если неизвестных форматов несколько, то они будут перечислены: `Unknown time format [epoch, age]`.
 
 При запросе на любой другой URL возвращается ответ с кодом статуса 404
+
+```
+$ cd "/app/dir"
+$ rakeup
+
+# app test
+curl --url 'localhost:9292/time?format=year,day,hour' -i # => 200
+curl --url 'localhost:9292/TEST?format=year,day,hour' -i # => 404
+curl --url 'localhost:9292/time?format=year,un,known' -i # => 400
+```
